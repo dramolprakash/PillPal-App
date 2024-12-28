@@ -1,0 +1,28 @@
+name: pillpal
+description: A medication reminder and dispenser app.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_blue_plus: ^1.31.16
+  provider: ^6.0.5
+  shared_preferences: ^2.2.0
+  sqflite: ^2.3.0
+  intl: ^0.18.1
+  #flutter_local_notifications: ^14.1.1
+  awesome_notifications: ^0.8.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
