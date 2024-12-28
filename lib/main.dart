@@ -14,7 +14,7 @@ void main() async {
 }
 
 class PillPalApp extends StatelessWidget {
-  const PillPalApp({Key? key}) : super(key: key);
+  const PillPalApp({super.key});
 
   @override
   Widget build(BuildContext context) {

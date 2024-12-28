@@ -1,15 +1,15 @@
 buildscript {
     ext {
         agpVersion = '8.2.1'
-        kotlinVersion = '1.9.20'
+        kotlinVersion = '1.9.20'  // Ensure this is the correct version
     }
-}
-
-rootProject.buildDir = '../build'
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-
-tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "com.android.tools.build:gradle:$agpVersion"
+    }
 }

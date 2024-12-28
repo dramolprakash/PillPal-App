@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DeviceStatusCard extends StatelessWidget {
-  const DeviceStatusCard({Key? key}) : super(key: key);
+  const DeviceStatusCard({super.key});
 
   @override
   Widget build(BuildContext context) {

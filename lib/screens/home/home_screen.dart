@@ -3,7 +3,7 @@ import 'widgets/device_status_card.dart';
 import 'widgets/next_dose_card.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();

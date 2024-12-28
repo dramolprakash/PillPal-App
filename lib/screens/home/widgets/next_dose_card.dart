@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NextDoseCard extends StatelessWidget {
-  const NextDoseCard({Key? key}) : super(key: key);
+  const NextDoseCard({super.key});
 
   @override
   Widget build(BuildContext context) {
