@@ -13,6 +13,7 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath "com.android.tools.build:gradle:$agpVersion"
+        classpath 'io.flutter:flutter-gradle-plugin' // Add this line
     }
 }
 
