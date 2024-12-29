@@ -14,21 +14,20 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-
-    }
-
-    plugins {
-        id "dev.flutter.flutter-gradle-plugin" version "1.0.0" apply false
-        id 'com.android.application' version '8.2.1' apply false
-        id 'com.android.library' version '8.2.1' apply false
+        maven { url 'https://jitpack.io' }  // Add this line
     }
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }  // Add this line
+        maven { url "${settings.ext.flutterSdkPath}/bin/cache/artifacts/engine/android-arm" }
+        maven { url "${settings.ext.flutterSdkPath}/bin/cache/artifacts/engine/android-arm64" }
+        maven { url "${settings.ext.flutterSdkPath}/bin/cache/artifacts/engine/android-x64" }
+        maven { url "${settings.ext.flutterSdkPath}/bin/cache/artifacts/engine/android-x86" }
     }
 }
 

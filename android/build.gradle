@@ -1,15 +1,28 @@
 buildscript {
     ext {
-        agpVersion = '8.2.1'
-        kotlinVersion = '1.9.20'  // Ensure this is the correct version
+        agpVersion = '7.3.0'
+        kotlinVersion = '1.8.20'
     }
     repositories {
         google()
         mavenCentral()
         gradlePluginPortal()
+        // Flutter repository for dependencies
+        maven { url 'https://storage.googleapis.com/download.flutter.io' }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath "com.android.tools.build:gradle:$agpVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        // Jitpack for Awesome Notifications and others
+        maven { url 'https://jitpack.io' }
+        // Flutter repository
+        maven { url 'https://storage.googleapis.com/download.flutter.io' }
     }
 }
